@@ -1,4 +1,4 @@
-package com.detectivehlh.springbootdemo.api.config;
+package com.detectivehlh.test.api.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -1,4 +1,4 @@
-package com.detectivehlh.springbootdemo.domain.entity;
+package com.detectivehlh.test.domain.entity;
 
 public class UserRole extends BaseEntity {
     private int id;

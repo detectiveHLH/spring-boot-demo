@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.detectivehlh.springbootdemo.data.dao.UserRoleMapper">
+<mapper namespace="com.detectivehlh.test.data.dao.UserRoleMapper">
 
-    <resultMap id="userRoleMap" type="com.detectivehlh.springbootdemo.domain.entity.UserRole">
+    <!--用于与数据库字段作一一对应-->
+    <resultMap id="userRoleMap" type="com.detectivehlh.test.domain.entity.UserRole">
         <result column="id" property="id"/>
         <result column="name" property="name"/>
     </resultMap>
 
+    <!--查询下方列出的所有列-->
     <sql id="allColumns">
         id, name
     </sql>
 
+    <!--定义表名-->
     <sql id="tableName">
         user_role
     </sql>
-
-    <select id="queryAccessableRolesByUserId" resultType="java.lang.Integer">
-        SELECT role FROM
-        <include refid="tableName"/>
-        WHERE user_id = #{userId}
-    </select>
-
-    <select id="queryByUserId" resultMap="userRoleMap">
-        SELECT
-        <include refid="allColumns"/>
-        FROM
-        <include refid="tableName"/>
-        WHERE
-        user_id = #{userId}
-    </select>
 
     <select id="all" resultMap="userRoleMap">
         SELECT
@@ -39,24 +27,4 @@
         ORDER BY id DESC
     </select>
 
-    <insert id="add">
-        INSERT INTO
-        <include refid="tableName"/>
-        (<include refid="allColumns"/>)
-        VALUES(#{role}, #{userId}, #{createdAt}, #{createdBy}, #{updatedAt}, #{updatedBy})
-    </insert>
-
-    <update id="edit">
-        UPDATE
-        <include refid="tableName"/>
-        SET
-        role = #{role},
-        updated_at = #{updatedAt},
-        updated_by = #{updatedBy}
-        WHERE
-        user_id = #{userId}
-    </update>
-    <delete id="del">
-        DELETE FROM user_role WHERE `user_id` = #{userId}
-    </delete>
 </mapper>

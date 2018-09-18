@@ -1,6 +1,6 @@
-package com.detectivehlh.springbootdemo.domain.entity;
-public abstract class BaseEntity {
+package com.detectivehlh.test.domain.entity;
 
+public abstract class BaseEntity {
     private long createdAt;
 
     private String createdBy;

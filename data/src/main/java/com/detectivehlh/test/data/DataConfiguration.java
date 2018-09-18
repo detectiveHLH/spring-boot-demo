@@ -1,4 +1,4 @@
-package com.detectivehlh.springbootdemo.data;
+package com.detectivehlh.test.data;
 
 
 import org.mybatis.spring.annotation.MapperScan;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @ComponentScan
 @Configuration
-@MapperScan("com.detectivehlh.springbootdemo.data.dao")
+@MapperScan("com.detectivehlh.test.data.dao")
 public class DataConfiguration {
 
 }

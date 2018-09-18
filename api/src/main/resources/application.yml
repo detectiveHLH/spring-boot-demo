@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eunomia
+    name: test
 # 数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -12,30 +12,3 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
-gitlab:
-  host: https://git.tap4fun.com
-  defaultNamespace: bi-web
-  privateToken: -WawDTNyvtpeHeLeW_b6
-
-redis:
-  url: redis://172.20.110.42:6379/11
-
-jenkins:
-  host: http://172.20.110.42:8080/
-  username: admin
-  password: jenkins99
-  javajob: eunomia_java
-  webjob: eunomia_js
-  nodejob: package_common_node
-
-jwt:
-  secret: tap4fun.com
-  issuer: bi-web
-
-pagehelper:
-  helper-dialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
-

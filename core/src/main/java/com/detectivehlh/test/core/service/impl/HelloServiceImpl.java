@@ -1,8 +1,8 @@
-package com.detectivehlh.springbootdemo.core.service.impl;
+package com.detectivehlh.test.core.service.impl;
 
-import com.detectivehlh.springbootdemo.core.service.HelloService;
-import com.detectivehlh.springbootdemo.data.dao.UserRoleMapper;
-import com.detectivehlh.springbootdemo.domain.entity.UserRole;
+import com.detectivehlh.test.core.service.HelloService;
+import com.detectivehlh.test.data.dao.UserRoleMapper;
+import com.detectivehlh.test.domain.entity.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class HelloServiceImpl implements HelloService {
     private UserRoleMapper userRoleMapper;
 
     @Override
-    public List<UserRole> createToken(String key) {
+    public List<UserRole> sayHello() {
         List<UserRole> data = userRoleMapper.all();
         return data;
     }

@@ -1,4 +1,4 @@
-package com.detectivehlh.springbootdemo.core;
+package com.detectivehlh.test.core;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
