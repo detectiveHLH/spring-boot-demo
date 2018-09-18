@@ -11,6 +11,7 @@ import javax.xml.crypto.Data;
 
 @SpringBootApplication
 @MapperScan("com.detectivehlh.springbootdemo.data.mapper")
+// 使core和data的依赖能够被扫描到容器中去
 @Import({CoreConfiguration.class, DataConfiguration.class})
 public class Application {
     public static void main(String[] args) {
