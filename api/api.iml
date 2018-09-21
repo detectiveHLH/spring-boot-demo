@@ -28,9 +28,6 @@
     <orderEntry type="module" module-name="core" />
     <orderEntry type="module" module-name="data" />
     <orderEntry type="module" module-name="domain" />
-    <orderEntry type="module" module-name="core" />
-    <orderEntry type="module" module-name="data" />
-    <orderEntry type="module" module-name="domain" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.0.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.0.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.0.8.RELEASE" level="project" />
